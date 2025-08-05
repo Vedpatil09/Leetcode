@@ -8,6 +8,8 @@ class Solution {
             sum+=nums[j];
             if(sum==k){
                 count++;
+            }else{
+                continue;
             }
         }sum=0;
        }
