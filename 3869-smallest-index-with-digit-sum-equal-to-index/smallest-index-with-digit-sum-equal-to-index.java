@@ -4,7 +4,7 @@ class Solution {
             int num=nums[i];
             int rem=0;
             int sum=0;
-            while(num>0){
+            while(num!=0){
                 sum=sum+(num%10);
                 num=num/10;
             }
