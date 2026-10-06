@@ -1,6 +1,6 @@
 class Solution {
     public int secondHighest(String s) {
-        int largest=-1;
+        int largest=Integer.MIN_VALUE;
         int sec=-1;
         boolean flag=true;
         for(int i=0;i<s.length();i++){
