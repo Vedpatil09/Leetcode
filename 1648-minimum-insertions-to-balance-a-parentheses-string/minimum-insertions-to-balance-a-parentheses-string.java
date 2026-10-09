@@ -1,5 +1,4 @@
 
-import java.util.Stack;
 
 class Solution {
     public int minInsertions(String s) {
@@ -13,26 +12,24 @@ class Solution {
                 st.push(')');
                 st.push(')');
             } else {
-                // If there is no opening parenthesis needing a ')'
-                if (st.isEmpty()) {
-                    count++; // Insert '('
 
-                    // Check if the next ')' forms a pair
+                if (st.isEmpty()) {
+                    count++;
+
                     if (i + 1 < s.length() && s.charAt(i + 1) == ')') {
                         i++;
                     } else {
-                        count++; // Insert the missing ')'
+                        count++;
                     }
                 } else {
                     st.pop();
 
-                    // If one ')' is still needed, check the next character
                     if (!st.isEmpty() && i + 1 < s.length()
                             && s.charAt(i + 1) == ')') {
                         st.pop();
                         i++;
                     } else if (!st.isEmpty()) {
-                        count++; // Insert the missing ')'
+                        count++;
                         st.pop();
                     }
                 }
