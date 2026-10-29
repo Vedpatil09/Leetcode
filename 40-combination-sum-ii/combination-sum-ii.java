@@ -13,6 +13,7 @@ class Solution {
         }
         if (index >= arr.length)
             return;
+        if(arr[index]>target)return;
         for (int i = index; i < arr.length; i++) {
             if(i>index && arr[i]==arr[i-1])continue;
             
